@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: SpringBoot_OATH
+  security:
+    oauth2:
+      client:
+        registration:
+           github: 
+              clientId: Ov23li7FEHJwdlBwewRl
+              clientSecret: 431248965e9f918d44175286217cbe51fa0293e5
+server:
+  port: 9092
