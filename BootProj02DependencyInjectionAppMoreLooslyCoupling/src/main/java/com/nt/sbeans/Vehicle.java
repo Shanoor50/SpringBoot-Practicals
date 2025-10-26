@@ -9,17 +9,7 @@ import org.springframework.stereotype.Component;
 public class Vehicle {
 	
 	@Autowired
-	
-	//Bad Practies
-	//@Qualifier("pEngine")//Dependency bean id is hardcoded
-	//@Qualifier("${engine.id}") //placeholer allow only in @Value
-	//@Qualifier("@Value('${engine.id}')") //@Value annotation is used as independent annotation. it cannot be used inside @Qualifier(-) anno
-	
-	//invalid
-	@Value("${engine.id}")//placeholer allow only in @Value
-	private String id;
-	
-	//@Qualifier(id)//variable(id) cannot pass to the @Qualifier annotation
+	@Qualifier("motor")
 	private IEngine engine;
 	
 	public void journey(String sourcePlace,String destPlace) {
